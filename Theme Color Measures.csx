@@ -1,3 +1,4 @@
+// '2021-05-09 / B.Agullo / added transparent color
 // by Bernat Agulló
 // www.esbrina-ba.com
 
@@ -12,6 +13,8 @@
 string colorTableName = "Color"; 
 string colorColumnName = "Color Name"; 
 string hexCodeColumnName = "Color Code"; 
+
+bool createTransparentColor = true; 
 
 // do not change code below this line
 
@@ -35,3 +38,5 @@ using (var reader = Model.Database.ExecuteReader(query))
         
     }
 }
+
+var transparentMeasure = Model.Tables[colorTableName].AddMeasure("Transparent","\"#FFFFFF00\""); 
