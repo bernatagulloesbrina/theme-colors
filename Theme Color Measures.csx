@@ -39,4 +39,7 @@ using (var reader = Model.Database.ExecuteReader(query))
     }
 }
 
-var transparentMeasure = Model.Tables[colorTableName].AddMeasure("Transparent","\"#FFFFFF00\""); 
+if(createTransparentColor){
+    var transparentMeasure = Model.Tables[colorTableName].AddMeasure("Transparent","\"#FFFFFF00\""); 
+};
+
